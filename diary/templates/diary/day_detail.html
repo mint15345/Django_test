@@ -1,0 +1,25 @@
+{% extends 'diary/base.html' %}
+
+{% block content %}
+
+    <table class="table">
+        <tr>
+            <th>タイトル</th>
+            <td>{{ day.title}}</td>
+        </tr>
+        <tr>
+            <th>発言者</th>
+            <td>{{ day.user}}</td>
+        </tr>
+        <tr>
+            <th>本文</th>
+            <td>{{ day.text | linebreaksbr | urlize }}</td>
+        </tr>
+        <tr>
+            <th>日付</th>
+            <td>{{ day.date }}</td>
+        </tr>
+    </table>
+
+
+    {% endblock %}
